@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity
     Button button0, button1, button2, button3, button4, button5, button6,
             button7, button8, button9, buttonAdd, buttonSub, buttonDivision,
             buttonMul, button10, buttonC, buttonEqual;
-    EditText Result;
+    TextView Result;
 
     float number1, number2;
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity
 
     int   flag=0;
 
-
+    int operator=0;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -46,13 +47,15 @@ public class MainActivity extends AppCompatActivity
         buttonDivision = (Button) findViewById(R.id.buttondiv);
         buttonC = (Button) findViewById(R.id.buttonC);
         buttonEqual = (Button) findViewById(R.id.buttoneql);
-        Result = (EditText) findViewById(R.id.edt1);
+        Result = (TextView) findViewById(R.id.edt1);
 
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Result.setText(Result.getText() + "1");
+
+
             }
         });
 
@@ -121,54 +124,114 @@ public class MainActivity extends AppCompatActivity
 
         buttonAdd.setOnClickListener(new View.OnClickListener()
         {
+
             @Override
             public void onClick(View v)
             {
 
-                if (Result == null)
+
+                if(operator==0)
                 {
-                    Result.setText("");
+
+                    if (Result == null) {
+                        Result.setText("");
+                    } else {
+                        number1 = Float.parseFloat(Result.getText() + "");
+                        Addition = true;
+                        Result.setText(null);
+                    }
                 }
+
                 else
-                    {
-                    number1 = Float.parseFloat(Result.getText() + "");
-                    Addition = true;
-                    Result.setText(null);
+                {
+                    Toast toast=Toast.makeText(getApplicationContext(),"Not possible",Toast.LENGTH_LONG);
+                    toast.show();
                 }
+                operator++;
             }
         });
 
-        buttonSub.setOnClickListener(new View.OnClickListener() {
+        buttonSub.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                number1 = Float.parseFloat(Result.getText() + "");
-                sub = true;
-                Result.setText(null);
+            public void onClick(View v)
+            {
+                if(operator==0)
+                {
+
+                    if (Result == null) {
+                        Result.setText("");
+                    } else {
+                        number1 = Float.parseFloat(Result.getText() + "");
+                        sub = true;
+                        Result.setText(null);
+                    }
+                }
+
+                else
+                {
+                    Toast toast=Toast.makeText(getApplicationContext(),"Not possible",Toast.LENGTH_LONG);
+                    toast.show();
+                }
+                operator++;
             }
         });
 
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                number1 = Float.parseFloat(Result.getText() + "");
-                Mul = true;
-                Result.setText(null);
+                if(operator==0)
+                {
+
+                    if (Result == null) {
+                        Result.setText("");
+                    } else {
+                        number1 = Float.parseFloat(Result.getText() + "");
+                        Mul = true;
+                        Result.setText(null);
+                    }
+                }
+
+                else
+                {
+                    Toast toast=Toast.makeText(getApplicationContext(),"Not possible",Toast.LENGTH_LONG);
+                    toast.show();
+                }
+                operator++;
             }
         });
 
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                number1 = Float.parseFloat(Result.getText() + "");
-                Div = true;
-                Result.setText(null);
+                if(operator==0)
+                {
+
+                    if (Result == null) {
+                        Result.setText("");
+                    } else {
+                        number1 = Float.parseFloat(Result.getText() + "");
+                        Div = true;
+                        Result.setText(null);
+                    }
+                }
+
+                else
+                {
+                    Toast toast=Toast.makeText(getApplicationContext(),"Not possible",Toast.LENGTH_LONG);
+                    toast.show();
+                }
+                operator++;
             }
         });
 
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+
                 number2 = Float.parseFloat(Result.getText() + "");
+                operator=0;
 
                 if (Addition == true)
                 {
@@ -195,13 +258,16 @@ public class MainActivity extends AppCompatActivity
                     Result.setText(number1 / number2 + "");
                     Div = false;
                 }
+
             }
         });
 
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Result.setText("");
+                operator=0;
             }
         });
 
