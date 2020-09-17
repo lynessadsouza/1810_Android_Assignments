@@ -6,7 +6,9 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcbc1d9a-3c5d-46e2-8db6-c377b1165534" name="Default Changelist" comment="" />
+    <list default="true" id="dcbc1d9a-3c5d-46e2-8db6-c377b1165534" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../RelativeLayout/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RelativeLayout/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
