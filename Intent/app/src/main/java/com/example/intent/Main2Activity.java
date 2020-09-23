@@ -26,29 +26,29 @@ public class Main2Activity extends AppCompatActivity
         passbtn=(Button)findViewById(R.id.button2);
 
         Intent i =getIntent();
-         String final_name= i.getStringExtra("new_name");
+         final String final_name= i.getStringExtra("new_name");
         uname.setText(final_name);
 
-        passbtn.setOnClickListener(new View.OnClickListener()
-        {
+
+
+        passbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                String userrname=uname.getText().toString().trim();
-                String password=pass.getText().toString().trim();
+            public void onClick(View v) {
+
+                String password =pass.getText().toString().trim();
+                Intent snintent=new Intent(getApplicationContext(),MainActivity3.class);
 
 
+                snintent.putExtra("Final_name",final_name);
+                snintent.putExtra("Final_password",password);
 
-                Intent secondIntent= new Intent(Main2Activity.this,Main3Activity.class);
-                secondIntent.putExtra("Final_name", userrname);
-                secondIntent.putExtra("Final_pass",password);
 
-                startActivity(secondIntent);
-
+                startActivity(snintent);
             }
         });
 
-
-
     }
+
+
+
 }

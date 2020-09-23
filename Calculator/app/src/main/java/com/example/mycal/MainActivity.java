@@ -129,6 +129,8 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v)
             {
 
+//flG FOR DOT OPERATOR
+                flag = 0;
 
                 if(operator==0)
                 {
@@ -156,6 +158,9 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+//flG FOR DOT OPERATOR
+                flag = 0;
+
                 if(operator==0)
                 {
 
@@ -180,6 +185,8 @@ public class MainActivity extends AppCompatActivity
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //flG FOR DOT OPERATOR
+                flag = 0;
                 if(operator==0)
                 {
 
@@ -204,6 +211,8 @@ public class MainActivity extends AppCompatActivity
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //flG FOR DOT OPERATOR
+                flag = 0;
                 if(operator==0)
                 {
 
@@ -268,6 +277,8 @@ public class MainActivity extends AppCompatActivity
             {
                 Result.setText("");
                 operator=0;
+                //flG FOR DOT OPERATOR
+                flag = 0;
             }
         });
 

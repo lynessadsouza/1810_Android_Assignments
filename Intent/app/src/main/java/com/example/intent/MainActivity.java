@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         e1=(EditText)findViewById(R.id.editText);
+
         clickme=(Button)findViewById(R.id.click);
 
         clickme.setOnClickListener(new View.OnClickListener()
@@ -31,7 +32,8 @@ public class MainActivity extends AppCompatActivity
             {
                 String name= e1.getText().toString().trim();
 
-                Intent i= new Intent(getApplicationContext(),Main2Activity.class);
+                Intent i= new Intent(MainActivity.this,Main2Activity.class);
+
                 i.putExtra("new_name",name);
                 startActivity(i);
 
