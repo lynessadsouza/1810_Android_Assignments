@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Design</string>
+
+
+    <string-array name="spinnerItems">
+        <item>North Goa</item>
+        <item>South Goa</item>
+    </string-array>
 </resources>
