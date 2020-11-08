@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Click To Get Details"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+
+    <TextView
+        android:id="@+id/salary"
+
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:hint=" Total Salary"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button">
+        <TextView
+            android:id="@+id/fetcheddata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:hint=" List Will Be Displayed Here"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </ScrollView>
+
+
+</RelativeLayout>
+
